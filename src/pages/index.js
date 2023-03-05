@@ -23,7 +23,7 @@ export default function IndexPage() {
     } catch (error) {
       console.error(error);
     }
-  };
+  }; 
 
   return (
     <div style={{ 
