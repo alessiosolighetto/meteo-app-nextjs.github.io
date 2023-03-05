@@ -18,7 +18,7 @@ export default function IndexPage() {
         axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${query}&units=metric&appid=${process.env.NEXT_PUBLIC_OPENWEATHERMAP_API_KEY}`),
       ]);
       setSelectedCity(query);
-      setWeatherData(weather.data);
+      setWeatherData(weather.data); 
       setForecastData(forecast.data.list.filter((item) => item.dt_txt.includes('12:00:00')));
     } catch (error) {
       console.error(error);
