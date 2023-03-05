@@ -26,19 +26,32 @@ export default function IndexPage() {
   };
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Soli Weather</title>
-        <meta name="description" content="Weather App" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div style={{ 
+      backgroundImage: "url('sfondo.jpg')",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      position: "fixed",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      zIndex: -1
+    }}>
+      <div className={styles.container}>
+        <Head>
+          <title>Soli Weather</title>
+          <meta name="description" content="Weather App" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>Soli Weather</h1>
-        <CitySearch onSearch={handleSearch} />
-        {weatherData && <WeatherCard weatherData={weatherData} />} {/* Update prop name */}
-        {forecastData && <ForecastCard forecastData={forecastData} />}
-      </main>
+        <main className={styles.main}>
+          <h1 className={styles.title}>Soli Weather</h1>
+          <CitySearch onSearch={handleSearch} />
+          {weatherData && <WeatherCard weatherData={weatherData} />} {/* Update prop name */}
+          {forecastData && <ForecastCard forecastData={forecastData} />}
+        </main>
+      </div>
     </div>
   );
 }
+
